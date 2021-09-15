@@ -68,12 +68,21 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
 
 }
 ```
-ParameterizedType 表示参数化类型，带有类型参数的类型，即常说的泛型 \n
-Type[]    getActualTypeArguments()  返回表示此类型实际类型参数的 Type 对象的数组。【重要】\n
-                   简单来说就是：获得参数化类型中<>里的类型参数的类型。\n
-                   因为可能有多个类型参数，例如Map<K, V>，所以返回的是一个Type[]数组。\n
-                   注意：无论<>中有几层<>嵌套，这个方法仅仅脱去最外层的<>，之后剩下的内容就作为这个方法的返回值，所以其返回值类型不一定。\n
-Type    getOwnerType()   返回 Type 对象，表示此类型是其成员之一的类型。\n
-                   如果此类型为顶层类型，则返回 null（大多数情况都是这样）。\n
-Type    getRawType()  返回 Type 对象，表示声明此类型的类或接口。\n
-                   简单来说就是：返回最外层<>前面那个类型，例如Map<K ,V>，返回的是Map类型。\n
+#ParameterizedType 表示参数化类型，带有类型参数的类型，即常说的泛型 
+
+#Type[]    getActualTypeArguments()  返回表示此类型实际类型参数的 Type 对象的数组。【重要】
+
+                   简单来说就是：获得参数化类型中<>里的类型参数的类型。
+                   
+                   因为可能有多个类型参数，例如Map<K, V>，所以返回的是一个Type[]数组。
+                   
+                   注意：无论<>中有几层<>嵌套，这个方法仅仅脱去最外层的<>，之后剩下的内容就作为这个方法的返回值，所以其返回值类型不一定。
+                   
+#Type    getOwnerType()   返回 Type 对象，表示此类型是其成员之一的类型。
+
+                   如果此类型为顶层类型，则返回 null（大多数情况都是这样）。
+                   
+#Type    getRawType()  返回 Type 对象，表示声明此类型的类或接口。
+
+                   简单来说就是：返回最外层<>前面那个类型，例如Map<K ,V>，返回的是Map类型。
+                   
